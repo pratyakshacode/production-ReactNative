@@ -18,6 +18,9 @@ app.use(morgan('dev'))
 
 app.use('/api/auth', router)
 app.use('/api/user', userRouter)
+app.get('/', (req, res)=> {
+    res.status(200).send({success: true, msg: "running"});
+});
 
 // connect to mongdb
 
